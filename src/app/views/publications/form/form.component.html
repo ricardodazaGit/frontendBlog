@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1 class="center">{{ h1Text }}</h1>
+        <form
+          novalidate
+          (ngSubmit)="submit()"
+          #publicationForm="ngForm"
+        >
+  
+          <div class="form-group">
+            <label for="publicTitle">Title</label>
+            <input
+              type="text"
+              class="form-control"
+              id="publicTitle"
+              name="publicTitle"
+              required
+              [(ngModel)]="publication.title"
+              #publicTitle="ngModel"
+            />
+            <div [hidden]="publicTitle.valid || publicTitle.pristine" style="color: firebrick">
+              El título es obligatorio
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="publicDescr">Description</label>
+            <input
+              type="text"
+              class="form-control"
+              id="publicDescr"
+              name="publicDescr"
+              required
+              [(ngModel)]="publication.description"
+              #publicDescr="ngModel"
+            />
+            <div [hidden]="publicDescr.valid || publicDescr.pristine" style="color: firebrick">
+              La descripción es obligatoria
+            </div>
+          </div>
+          <button
+            [disabled]="!publicationForm.valid"
+            class="btn btn-block btn-primary"
+            type="submit"
+          >
+          {{submitText}}
+          </button>
+          <a routerLink="/publications" class="btn btn-primary btn-block">Volver al listado</a>
+  
+        </form>
+      </div>
+    </div>
+  </div>
