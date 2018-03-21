@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
     <router-outlet></router-outlet>
     <rp-footer><rp-footer>
   `,
-  styles: []
+  styles: [
+    
+  ]
 })
 export class AppComponent {
   title = 'rp';

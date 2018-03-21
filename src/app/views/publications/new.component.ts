@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Publication } from './publication';
+import { PublicationsService } from './publications.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'rp-new',
@@ -21,10 +23,16 @@ import { Publication } from './publication';
 export class NewPublication {
 
   public publication: Publication = new Publication;
-  constructor() { }
+  constructor(
+    private publicationService: PublicationsService,
+    private router: Router
+  ) { }
 
   guardame(publication: Publication){
-    console.log(publication);
+    this.publicationService.addOrUpdatePublication$(publication)
+      .subscribe(() => {
+        this.router.navigate(['/publications']);
+      });
   }
 
 }

@@ -8,13 +8,17 @@ import { NewPublication } from './new.component';
 import { PublicDetail } from './public-detail.component';
 import { FormComponent } from './form/form.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PublicationsService } from './publications.service';
 
 @NgModule({
   imports: [
     CommonModule,
     PublicationsRouting,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  declarations: [PublicationsComponent, ListComponent, NewPublication, PublicDetail, FormComponent ]
+  declarations: [PublicationsComponent, ListComponent, NewPublication, PublicDetail, FormComponent ],
+  providers: [ PublicationsService ]
 })
 export class PublicationsModule { }

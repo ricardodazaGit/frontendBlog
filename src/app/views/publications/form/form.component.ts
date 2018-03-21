@@ -4,7 +4,13 @@ import { Publication } from '../publication';
 @Component({
   selector: 'rp-form',
   templateUrl: './form.component.html',
-  styles: []
+  styles: [
+    `
+    .btn-primary {
+      background-color: #006600
+    }
+    `
+  ]
 })
 export class FormComponent {
 
