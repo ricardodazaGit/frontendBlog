@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Publication } from './publication';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Http, Headers } from '@angular/http';
 import 'rxjs/add/observable/throw'; // se utiliza para capturar excepciones
 import 'rxjs/add/operator/catch'; // se utiliza para capturar excepciones
+import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 
-const cudOptions = { headers: new HttpHeaders({'Content-Type' : 'application/json'})};
+const cudOptions = { headers: new Headers({'Content-Type' : 'application/json'})};
 
 @Injectable()
 export class PublicationsService {
@@ -14,27 +15,32 @@ export class PublicationsService {
 
   private publications: Publication[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private _http: Http) {}
 
-  getPublicationsList$(): Observable<Publication[]> {
-    return this.http.get<Publication[]>(this.url + "/getPublications")
+  getPublicationsList$() {
+    return this._http.get(`${this.url}/getPublications`)
+      .map( res => res.json())
       .catch(this.handleError);
   }
 
-  getOnePublication$ (id: string | number): Observable<Publication>{
-    const url = `${this.url}/${id}`;
-    return this.http.get<Publication>(url)
+  getOnePublication$ (id: string | number){
+    const url = `${this.url}/getPublication/${id}`;
+    return this._http.get(url)
+      .map(res => res.json())
       .catch(this.handleError);
   }
 
-  addOrUpdatePublication$ (publication: Publication): Observable<Publication>{
-    const newPublic = Object.assign({}, publication); // Convertimos la clase user en un objeto
-    return this.http.post<Publication>(this.url + "/saveOrUpdate", newPublic, cudOptions)
+  addOrUpdatePublication$ (publication: Publication){
+    return this._http.post(`${this.url}/saveOrUpdate`, JSON.stringify( publication ))
+      .map(res => {
+        return res.json
+      })
       .catch(this.handleError);
   }
 
-  deletePublication (publication: Publication | number): Observable<Publication> {
-    return this.http.post<Publication>(this.url + "/deletePublication", cudOptions)
+  deletePublication (id: number) {
+    return this._http.delete(`${this.url}/deletePublication/${id}`)
+      .map(res => res.json())
       .catch(this.handleError);
   }
 

@@ -1,0 +1,21 @@
+<h1>Artículos</h1>
+<hr>
+
+<div *ngIf="publications.length > 0">
+  <div class="card mb-3" *ngFor="let public of publications">
+    <img class="card-img-top" src="assets/img/img-title-public-1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ public.titlePost }}</h5>
+      <p class="card-text">{{ public.descriptionPost | limiteCaracteres }}</p>
+      <!-- <p class="card-text"><small class="text-muted">{{ public.fechaPublicacion }}</small></p> -->
+    </div>
+  <!-- (click)="showDetail(public.id)" -->
+    <button
+      (click)="showDetail(public.id)"
+      type="button"
+      class="btn btn-outline-primary btn-block"
+    >
+    Ver más...
+    </button>
+  </div>
+</div>
