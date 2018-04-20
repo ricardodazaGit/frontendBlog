@@ -3,7 +3,7 @@
       <img class="card-img-top" src="assets/img/img-title-public-1.jpg" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">{{ publication.titlePost }}</h5>
-        <p class="card-text">{{ publication.descriptionPost }}</p>
+        <p class="card-text" [innerHTML]="publication.descriptionPost"></p>
         <!-- <p class="card-text"><small class="text-muted">{{ publication.fechaPublicacion }}</small></p> -->
       </div>
     </div>
