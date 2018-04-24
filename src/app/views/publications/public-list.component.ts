@@ -22,8 +22,6 @@ export class PublicListComponent implements OnInit {
   ngOnInit() {
     this._publicService.getPublicationsList$()
     .subscribe(publications => {
-      //this.publications = publications.data;
-      console.log(publications);
       this.publications = publications;
     });
   }
