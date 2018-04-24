@@ -3,7 +3,7 @@
 
 <div *ngIf="publications.length > 0">
   <div class="card mb-3" *ngFor="let public of publications">
-    <img class="card-img-top" src="assets/img/img-title-public-1.jpg" alt="Card image cap">
+    <img class="card-img-top" [src]="public.imgTitle" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{ public.titlePost }}</h5>
       <p class="card-text">{{ public.descriptionPost | limiteCaracteres }}</p>

@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'rp-not-found',
   template: `
-    <h1>Not Found</h1>
-    <h2>404</h2>
+    <p>Para cualquier duda o consulta, podéis escribirnos a blogjoselito@outlook.com</p>
     <a routerLink="/">Go Home</a>
   `,
   styles: []

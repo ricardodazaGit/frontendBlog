@@ -26,6 +26,7 @@ export class PublicDetail implements OnInit {
         this._publicService.getOnePublication$(this._id)
           .subscribe(publication => {
             this.publication = publication;
+            console.log(publication);
           });
       });
   }

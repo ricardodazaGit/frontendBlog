@@ -3,9 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'rp-footer',
   template: `
-    <p>
-      footer works!
+  <footer class="footer text-center">
+  <div class="container">
+    <p class="text-white">
+      &copy; Blog Joselito
     </p>
+  </div>
+</footer>
   `,
   styles: []
 })

@@ -3,12 +3,7 @@ import * as moment from "moment";
 
 @Component({
   selector: 'rp-home',
-  template: `
-    <main>
-    <header>Main content of the Home Page</header>
-    <div>Still a work in progress... for Now: {{ now }}</div>
-    </main>
-  `,
+  templateUrl: './home.component.html',
   styles: []
 })
 export class HomeComponent implements OnInit {

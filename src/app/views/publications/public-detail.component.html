@@ -1,6 +1,7 @@
 <div *ngIf="publication">
     <div class="card mb-3">
-      <img class="card-img-top" src="assets/img/img-title-public-1.jpg" alt="Card image cap">
+      <img class="card-img-top img-fluid" [src]="publication.imgTitle" alt="Card image cap">
+      
       <div class="card-body">
         <h5 class="card-title">{{ publication.titlePost }}</h5>
         <p class="card-text" [innerHTML]="publication.descriptionPost"></p>

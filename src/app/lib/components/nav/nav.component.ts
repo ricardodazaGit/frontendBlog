@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nav.component.html',
   styles: [
     `
-    .bd-navbar {
+    nav {
       background-color: #006600;
     }
     a {
