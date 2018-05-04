@@ -11,14 +11,14 @@ const cudOptions = { headers: new Headers({'Content-Type' : 'application/json'})
 @Injectable()
 export class PublicationsService {
 
-  private url = "http://localhost:8080";
+  private url = "../../assets/api/publics.json";
 
   private publications: Publication[] = [];
 
   constructor(private _http: Http) {}
 
   getPublicationsList$() {
-    return this._http.get(`${this.url}/getPublications`)
+    return this._http.get(`${this.url}`)
       .map( res => res.json())
       .catch(this.handleError);
   }
