@@ -23,10 +23,14 @@ export class PublicDetail implements OnInit {
     this._route.params
       .subscribe(params => {
         this._id = params['id'];
-        this._publicService.getOnePublication$(this._id)
-          .subscribe(publication => {
-            this.publication = publication;
-            console.log(publication);
+        this._publicService.getPublicationsList$()
+          .subscribe(publications => {
+            //this.publication = publication;
+            for(let i in publications){
+              if(publications[i].id.toString() === this._id){
+                this.publication = publications[i];
+              }
+            }
           });
       });
   }
