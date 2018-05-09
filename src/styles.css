@@ -13,3 +13,8 @@
     width: 100%;
     background-color: #006600;
   }
+.img-title-publication{
+  max-height: 20em;
+  max-width: 20em;
+  margin: auto;
+}
