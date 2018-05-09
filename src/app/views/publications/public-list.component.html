@@ -2,8 +2,8 @@
 <hr>
 
 <div *ngIf="publications.length > 0">
-  <div class="card mb-3" *ngFor="let public of publications">
-    <img class="card-img-top" [src]="public.imgTitle" alt="Card image cap" *ngIf="public.imgTitle">
+  <div class="card mb-12" *ngFor="let public of publications">
+    <img class="card-img-top img-title-publication" style="" [src]="public.imgTitle" alt="Card image cap" *ngIf="public.imgTitle">
     <div class="card-body">
       <h5 class="card-title">{{ public.titlePost }}</h5>
       <p class="card-text" [innerHTML]="public.descriptionPost | limiteCaracteres"></p>
