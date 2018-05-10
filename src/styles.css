@@ -18,3 +18,10 @@ html {
   margin-bottom: 0;
   font-size: 0.7rem;
 }
+
+.img-home{
+  max-height: 35em; 
+  max-width: 35em; 
+  display: block;
+  margin: 0 auto;
+}
