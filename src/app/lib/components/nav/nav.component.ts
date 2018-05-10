@@ -8,9 +8,6 @@ import { Component, OnInit } from '@angular/core';
     nav {
       background-color: #006600 !important;
     }
-    a {
-      color: white;
-    }
     .navbar-toggler-icon{
       color: white;
     }
