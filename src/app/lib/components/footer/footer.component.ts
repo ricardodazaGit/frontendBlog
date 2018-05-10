@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   <footer class="footer text-center">
   <div class="container">
     <p class="text-white">
-      &copy; Blog Joselito
+      &copy; Blog de Joselito
     </p>
   </div>
 </footer>
