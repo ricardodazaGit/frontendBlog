@@ -20,14 +20,14 @@ html {
 }
 
 .img-home{
-  max-height: 35em; 
+  max-height: auto; 
   max-width: 35em; 
   display: block;
   margin: 0 auto;
 }
 .img-public-title{
-  max-height: 35em; 
-  max-width: 35em; 
+  max-height: auto; 
+  max-width: 20em; 
   display: block;
   margin: 0 auto;
 }
