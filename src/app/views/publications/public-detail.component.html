@@ -1,6 +1,8 @@
 <div *ngIf="publication">
+    <h1>{{ publication.titlePost }}</h1>
+    <hr>
     <div class="card mb-3">
-      <img class="card-img-top img-fluid" [src]="publication.imgTitle" alt="Card image cap" *ngIf="publication.imgTitle">
+      <img class="card-img-top img-public-title" [src]="publication.imgTitle" alt="Card image cap" *ngIf="publication.imgTitle">
       
       <div class="card-body">
         <h5 class="card-title">{{ publication.titlePost }}</h5>
@@ -8,4 +10,5 @@
         <!-- <p class="card-text"><small class="text-muted">{{ publication.fechaPublicacion }}</small></p> -->
       </div>
     </div>
+    <h5><a routerLink="/publications">Volver a Artículos</a></h5>
   </div>
