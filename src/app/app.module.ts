@@ -19,11 +19,13 @@ import { PublicationsService } from './views/publications/publications.service';
 
 //Pipes
 import { LimiteCaracteresPipe } from './pipes/limite-caracteres.pipe';
+import { HomeComponent } from './views/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     PublicationsComponent,
     PublicListComponent,
     PublicDetail,
