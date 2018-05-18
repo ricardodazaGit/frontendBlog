@@ -20,6 +20,7 @@ import { PublicationsService } from './views/publications/publications.service';
 //Pipes
 import { LimiteCaracteresPipe } from './pipes/limite-caracteres.pipe';
 import { HomeComponent } from './views/home/home.component';
+import { ContactComponent } from './views/contact/contact.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HomeComponent } from './views/home/home.component';
     PublicListComponent,
     PublicDetail,
     NewPublication,
+    ContactComponent,
     FormComponent,
     LimiteCaracteresPipe
   ],

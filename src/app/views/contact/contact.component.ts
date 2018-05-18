@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   `,
   styles: []
 })
-export class NotFoundComponent implements OnInit {
+export class ContactComponent implements OnInit {
 
   constructor() { }
 

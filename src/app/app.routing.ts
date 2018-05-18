@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
-import { NotFoundComponent } from './views/not-found/not-found.component';
 import { PublicationsComponent } from './views/publications/publications.component';
 import { PublicDetail } from './views/publications/public-detail.component';
+import { ContactComponent } from './views/contact/contact.component';
 
 const routes: Routes = [
   
@@ -16,10 +16,6 @@ const routes: Routes = [
     path:"home",
     component: HomeComponent
   },
-  // {
-  //   path: "publications",
-  //   loadChildren: "./views/publications/publications.module#PublicationsModule"
-  // },
   {
     path:"publications",
     component: PublicationsComponent
@@ -29,8 +25,8 @@ const routes: Routes = [
     component: PublicDetail
   },
   {
-    path: "404",
-    component: NotFoundComponent
+    path: "contact",
+    component: ContactComponent
   },
   {
     path:"**",
