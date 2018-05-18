@@ -4,9 +4,12 @@ import { Component, OnInit } from '@angular/core';
   selector: 'rp-footer',
   template: `
   <footer class="footer text-center">
-  <div class="container">
-    <p class="text-white">
-      www.elreclamodelaperdiz.com &copy;Blog de Joselito
+  <div class="row text-white">
+    <p class="col-lg-6">
+      www.elreclamodelaperdiz.com
+    </p>
+    <p class="col-lg-6">
+      &copy;Blog de Joselito
     </p>
   </div>
 </footer>
