@@ -1,8 +1,8 @@
 <div *ngIf="publication">
-    <h1>{{ publication.titlePost }}</h1>
+    <h1 class="brown-title">{{ publication.titlePost }}</h1>
     <hr>
     <div class="card mb-3">
-      <img class="card-img-top img-public-title" [src]="publication.imgTitle" alt="Card image cap" *ngIf="publication.imgTitle">
+      <img style="border: 2px solid; padding: 1em"class="card-img-top img-public-title" [src]="publication.imgTitle" alt="Card image cap" *ngIf="publication.imgTitle">
       
       <div class="card-body">
         <h5 class="card-title">{{ publication.titlePost }}</h5>
