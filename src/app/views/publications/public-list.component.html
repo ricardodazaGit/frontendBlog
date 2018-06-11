@@ -1,11 +1,11 @@
-<h1>Artículos</h1>
+<h1 class="brown-title">Artículos</h1>
 <hr>
 
 <div *ngIf="publications.length > 0">
   <div class="card mb-3" *ngFor="let public of publications">
-    <img class="card-img-top img-public-title" [src]="public.imgTitle" alt="Card image cap" *ngIf="public.imgTitle">
+    <img style="border: 2px solid; padding: 1em" class="card-img-top img-public-title" [src]="public.imgTitle" alt="Card image cap" *ngIf="public.imgTitle">
     <div class="card-body">
-      <h5 class="card-title">{{ public.titlePost }}</h5>
+      <h5 class="card-title brown-title">{{ public.titlePost }}</h5>
       <p class="card-text" [innerHTML]="public.descriptionPost | limiteCaracteres"></p>
       <!-- <p class="card-text"><small class="text-muted">{{ public.fechaPublicacion }}</small></p> -->
     </div>
@@ -15,7 +15,7 @@
       type="button"
       class="btn btn-outline-primary btn-block"
     >
-    Ver más...
+    Leer más...
     </button>
   </div>
 </div>

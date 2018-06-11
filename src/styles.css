@@ -5,7 +5,13 @@
 
 html {
   position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+
+.brown-title{
+  color: #752717;
+}
+
 
 .footer {
   position: absolute;
