@@ -25,6 +25,11 @@ html {
   font-size: 0.7rem;
 }
 
+.home-title{
+  font-family: Kristen ITC; 
+  color: rgb(214, 218, 27);
+}
+
 .img-home{
   max-height: auto; 
   max-width: 35em; 
@@ -33,7 +38,7 @@ html {
 }
 .img-public-title{
   max-height: auto; 
-  max-width: 20em; 
+  max-width: 25em; 
   display: block;
   margin: 0 auto;
 }

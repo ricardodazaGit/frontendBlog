@@ -11,6 +11,13 @@ import { Component, OnInit } from '@angular/core';
     .navbar-toggler-icon{
       color: white;
     }
+    #navbarNav{
+      padding-left: 1em;
+    }
+    .navbar-brand {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
     `
   ]
 })

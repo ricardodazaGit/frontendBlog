@@ -8,7 +8,20 @@ import { Publication } from './publication';
 @Component({
   selector: 'rp-list',
   templateUrl: './public-list.component.html',
-  styles: []
+  styles: [
+    `
+    .btn-outline-primary {
+      color: #752717;      
+      background-color: transparent;
+      background-image: none;
+      border-color: #752717;
+  }
+  .btn-outline-primary:hover {
+    background-color:#752717;
+    color: white;
+  }
+    `
+  ]
 })
 export class PublicListComponent implements OnInit {
 

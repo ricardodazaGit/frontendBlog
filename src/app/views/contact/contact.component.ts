@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   selector: 'rp-not-found',
   template: `
     <p>Para cualquier duda, consulta o sugerencia, podéis escribirnos a <a href="mailto:blogjoselito@outlook.com">blogjoselito@outlook.com</a></p>
-    <a routerLink="/">Volver a inicio</a>
+    <a routerLink="/" class="brown-title">Volver a inicio</a>
   `,
   styles: []
 })
