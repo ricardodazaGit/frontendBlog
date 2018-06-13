@@ -20,6 +20,10 @@ import { Publication } from './publication';
     background-color:#752717;
     color: white;
   }
+  .btn-outline-primary:focus {
+    background-color:#752717;
+    color: white;
+  }
     `
   ]
 })
