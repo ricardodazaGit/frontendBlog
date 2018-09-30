@@ -45,7 +45,6 @@ export class PublicListComponent implements OnInit {
 
   showDetail(_id: number) {
     this._router.navigate(['/publications',_id]);
-    //$("#.card-text").innerHtml(this.publications[_id].descriptionPost)
   }
 
 }
