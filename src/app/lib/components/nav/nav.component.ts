@@ -18,6 +18,15 @@ import { Component, OnInit } from '@angular/core';
       padding-top: 0;
       padding-bottom: 0;
     }
+    .dropdown-menu {
+      background-color: #006600 !important; 
+    }
+    .dropdown-item{
+      color: white !important
+    }
+    .dropdown-item:hover {
+      background-color: #03a203
+    }
     `
   ]
 })

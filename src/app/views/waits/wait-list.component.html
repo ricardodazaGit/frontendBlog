@@ -1,0 +1,21 @@
+<h1 class="brown-title">Esperas del jabalí</h1>
+<hr>
+
+<div *ngIf="waitPublications.length > 0">
+  <div class="card mb-3" *ngFor="let wait of waitPublications">
+    <img style="border: 2px solid; padding: 1em" class="card-img-top img-public-title" [src]="wait.imgTitle" alt="Card image cap" *ngIf="wait.imgTitle">
+    <div class="card-body">
+      <h5 class="card-title brown-title">{{ wait.titlePost }}</h5>
+      <p class="card-text" [innerHTML]="wait.descriptionPost | limiteCaracteres"></p>
+      <!-- <p class="card-text"><small class="text-muted">{{ public.fechaPublicacion }}</small></p> -->
+    </div>
+  <!-- (click)="showDetail(public.id)" -->
+    <button
+      (click)="showDetail(wait.id)"
+      type="button"
+      class="btn btn-outline-primary btn-block"
+    >
+    Leer más...
+    </button>
+  </div>
+</div>
