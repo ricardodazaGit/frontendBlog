@@ -29,6 +29,7 @@ export class WaitDetail implements OnInit {
             for(let i in waits){
               if(waits[i].id.toString() === this._id){
                 this.wait = waits[i];
+                document.title = waits[i].titlePost + ". Esperas del jabalí";
               }
             }
           });

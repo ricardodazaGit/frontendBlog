@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewChecked } from '@angular/core';
 import * as moment from "moment";
 
 @Component({
@@ -6,7 +6,7 @@ import * as moment from "moment";
   templateUrl: './home.component.html',
   styles: []
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewChecked {
 
   now = moment().format()
 
@@ -15,4 +15,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  ngAfterViewChecked(){
+    document.title = "Perdiz con reclamo y esperas del jabalí: Blog de Joselito"
+  }
 }

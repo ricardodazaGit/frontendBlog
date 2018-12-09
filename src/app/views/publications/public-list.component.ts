@@ -40,6 +40,7 @@ export class PublicListComponent implements OnInit {
     this._publicService.getPublicationsList$()
     .subscribe(publications => {
       this.publications = publications;
+      document.title= "Perdiz con reclamo: Blog de Joselito";
     });
   }
 

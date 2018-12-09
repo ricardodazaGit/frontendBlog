@@ -40,6 +40,7 @@ export class WaitPublicListComponent implements OnInit {
     this._waitsService.getWaitPublicationsList$()
     .subscribe(waits => {
       this.waitPublications = waits;
+      document.title = "Esperas del jabalí: Blog de Joselito"
     });
   }
 

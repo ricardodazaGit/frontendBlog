@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "Contacta con nosotros: Blog de Joselito"
   }
 
 }

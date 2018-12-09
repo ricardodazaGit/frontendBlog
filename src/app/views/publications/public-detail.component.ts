@@ -29,6 +29,7 @@ export class PublicDetail implements OnInit {
             for(let i in publications){
               if(publications[i].id.toString() === this._id){
                 this.publication = publications[i];
+                document.title = publications[i].titlePost + ". Perdíz con reclamo";
               }
             }
           });
