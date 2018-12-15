@@ -36,11 +36,11 @@ export class PublicListComponent implements OnInit {
     private _router: Router
   ) { }
 
-  ngOnInit() {
-    this._publicService.getPublicationsList$()
-    .subscribe(publications => {
-      this.publications = publications;
-      document.title= "Perdiz con reclamo: Blog de Joselito";
+  private orderPublicationsById(){
+    this.publications.sort((a, b) => {
+      if (a.id > b.id) return -1;
+      else if (a.id < b.id) return 1;
+      else return 0;
     });
   }
 
@@ -48,4 +48,12 @@ export class PublicListComponent implements OnInit {
     this._router.navigate(['/publications',_id]);
   }
 
+  ngOnInit() {
+    this._publicService.getPublicationsList$()
+    .subscribe(publications => {
+      this.publications = publications;
+      this.orderPublicationsById();
+      document.title= "Perdiz con reclamo: Blog de Joselito";
+    });
+  }
 }

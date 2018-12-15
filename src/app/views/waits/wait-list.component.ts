@@ -36,11 +36,11 @@ export class WaitPublicListComponent implements OnInit {
     private _router: Router
   ) { }
 
-  ngOnInit() {
-    this._waitsService.getWaitPublicationsList$()
-    .subscribe(waits => {
-      this.waitPublications = waits;
-      document.title = "Esperas del jabalí: Blog de Joselito"
+  private orderWaitingsById(){
+    this.waitPublications.sort((a, b) => {
+      if (a.id > b.id) return -1;
+      else if (a.id < b.id) return 1;
+      else return 0;
     });
   }
 
@@ -48,4 +48,12 @@ export class WaitPublicListComponent implements OnInit {
     this._router.navigate(['/esperasDelJabali',_id]);
   }
 
+  ngOnInit() {
+    this._waitsService.getWaitPublicationsList$()
+    .subscribe(waits => {
+      this.waitPublications = waits;
+      this.orderWaitingsById();
+      document.title = "Esperas del jabalí: Blog de Joselito"
+    });
+  }
 }
