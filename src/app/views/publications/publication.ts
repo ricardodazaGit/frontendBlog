@@ -3,4 +3,5 @@ export class Publication {
     title: string;
     description: string;
     imgTitle: string;
+    fechaPublicacion: string;
 }

@@ -7,9 +7,8 @@
     <div class="card-body">
       <h5 class="card-title brown-title">{{ wait.titlePost }}</h5>
       <p class="card-text" [innerHTML]="wait.descriptionPost | limiteCaracteres"></p>
-      <!-- <p class="card-text"><small class="text-muted">{{ public.fechaPublicacion }}</small></p> -->
+      <p class="card-text"><small class="text-muted">Fecha publicación {{ wait.fechaPublicacion }}</small></p>
     </div>
-  <!-- (click)="showDetail(public.id)" -->
     <button
       (click)="showDetail(wait.id)"
       type="button"

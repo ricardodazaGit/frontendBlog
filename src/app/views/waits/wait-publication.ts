@@ -3,4 +3,5 @@ export class WaitPublication {
     title: string;
     description: string;
     imgTitle: string;
+    fechaPublicacion: string;
 }
