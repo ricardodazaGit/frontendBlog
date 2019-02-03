@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'rp-title',
   template: `
     <a routerLink="/">{{ title }}</a>
-    <a routerLink="/publications"></a>
+    <a routerLink="/perdizConReclamo"></a>
   `,
   styles: []
 })

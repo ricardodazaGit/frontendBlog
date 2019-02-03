@@ -45,7 +45,7 @@ export class PublicListComponent implements OnInit {
   }
 
   showDetail(_id: number) {
-    this._router.navigate(['/publications',_id]);
+    this._router.navigate(['/perdizConReclamo',_id]);
   }
 
   ngOnInit() {

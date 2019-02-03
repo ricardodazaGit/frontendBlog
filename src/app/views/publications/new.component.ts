@@ -31,7 +31,7 @@ export class NewPublication {
   guardame(publication: Publication){
     this.publicationService.addOrUpdatePublication$(publication)
       .subscribe(() => {
-        this.router.navigate(['/publications']);
+        this.router.navigate(['/perdizConReclamo']);
       });
   }
 
