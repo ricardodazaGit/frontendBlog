@@ -1,0 +1,13 @@
+<div *ngIf="cook">
+    <h1 class="brown-title">{{ cook.titlePost }}</h1>
+    <hr>
+    <div class="card mb-3">
+      <img style="border: 2px solid; padding: 1em"class="card-img-top img-public-title" [src]="cook.imgTitle" alt="Card image cap" *ngIf="cook.imgTitle">
+      
+      <div class="card-body">
+        <p class="card-text" [innerHTML]="cook.descriptionPost"></p>
+        <p class="card-text"><small class="text-muted">{{ cook.fechaPublicacion }}</small></p>
+      </div>
+    </div>
+    <h5><a routerLink="/home" class="brown-title">Volver a Artículos</a></h5>
+  </div>

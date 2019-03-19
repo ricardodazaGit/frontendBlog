@@ -1,0 +1,26 @@
+<h1 class="brown-title">Recetas de cocina campera</h1>
+<hr>
+
+<div *ngIf="cookPublications.length > 0">
+  <div class="card mb-3" *ngFor="let cook of cookPublications">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-4">
+          <img style="border: 2px solid; padding: 1em" class="card-img-top img-public-title" [src]="cook.imgTitle" alt="Card image cap" *ngIf="cook.imgTitle">
+        </div>
+        <div class="col-lg-8">  
+          <h5 class="card-title brown-title">{{ cook.titlePost }}</h5>
+          <p class="card-text" [innerHTML]="cook.descriptionPost | limiteCaracteres"></p>
+          <p class="card-text"><small class="text-muted">Fecha publicación {{ cook.fechaPublicacion }}</small></p>
+        </div>
+      </div>
+    </div>
+    <button
+      (click)="showDetail(cook.id)"
+      type="button"
+      class="btn btn-outline-primary btn-block"
+    >
+    Leer más...
+    </button>
+  </div>
+</div>

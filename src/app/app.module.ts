@@ -15,11 +15,15 @@ import { FormComponent } from './views/publications/form/form.component';
 import { WaitPublicationsComponent } from './views/waits/waits.component';
 import { WaitPublicListComponent } from './views/waits/wait-list.component';
 import { WaitDetail } from './views/waits/waits-detail.component';
+import { CookPublicationsComponent } from './views/cooks/cooks.component';
+import { CookListComponent } from './views/cooks/cook-list.component';
+import { CookDetail } from './views/cooks/cooks-detail.component';
 import { HttpModule } from '@angular/http';
 
 //Services
 import { PublicationsService } from './views/publications/publications.service';
 import { WaitsService } from './views/waits/waits.service';
+import { CookService } from './views/cooks/cooks.service';
 
 //Pipes
 import { LimiteCaracteresPipe } from './pipes/limite-caracteres.pipe';
@@ -39,7 +43,10 @@ import { ContactComponent } from './views/contact/contact.component';
     LimiteCaracteresPipe,
     WaitPublicationsComponent,
     WaitPublicListComponent,
-    WaitDetail
+    WaitDetail,
+    CookPublicationsComponent,
+    CookListComponent,
+    CookDetail
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,7 @@ import { ContactComponent } from './views/contact/contact.component';
     FormsModule,
     HttpModule
   ],
-  providers: [ PublicationsService, WaitsService ],
+  providers: [ PublicationsService, WaitsService, CookService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

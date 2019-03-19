@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'rp-waits',
+  selector: 'rp-cooks',
   template: `
-    <rp-waitlist></rp-waitlist>
+    <rp-cookList></rp-cookList>
   `,
   styles: []
 })
-export class WaitPublicationsComponent implements OnInit {
+export class CookPublicationsComponent implements OnInit {
 
   constructor() { }
 

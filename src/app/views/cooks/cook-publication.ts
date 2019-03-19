@@ -1,4 +1,4 @@
-export class Publication {
+export class CookPublication {
     id?: number;
     title: string;
     description: string;

@@ -6,6 +6,8 @@ import { PublicDetail } from './views/publications/public-detail.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { WaitPublicationsComponent } from './views/waits/waits.component';
 import { WaitDetail } from './views/waits/waits-detail.component';
+import { CookPublicationsComponent } from './views/cooks/cooks.component';
+import { CookDetail } from './views/cooks/cooks-detail.component';
 
 const routes: Routes = [
   
@@ -33,6 +35,14 @@ const routes: Routes = [
   {
     path:"esperasDelJabali/:id",
     component: WaitDetail
+  },
+  {
+    path:"cocina",
+    component: CookPublicationsComponent
+  },
+  {
+    path:"cocina/:id",
+    component: CookDetail
   },
   {
     path: "contact",
