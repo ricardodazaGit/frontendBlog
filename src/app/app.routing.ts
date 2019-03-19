@@ -21,11 +21,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path:"publications",
+    path:"perdizConReclamo",
     component: PublicationsComponent
   },
   {
-    path:"publications/:id",
+    path:"perdizConReclamo/:id",
     component: PublicDetail
   },
   {

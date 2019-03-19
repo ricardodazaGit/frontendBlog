@@ -24,12 +24,6 @@ import { CookPublication } from './cook-publication';
     background-color:#752717;
     color: white;
   }
-  .footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: #eea849 !important;
-  }
     `
   ]
 })

@@ -45,7 +45,7 @@ export class PublicDetail implements OnInit {
 
   private redirectIfPublicationNotExits(){
     if(this.publicationNotExits) {
-      this._router.navigate(["/publications"]);
+      this._router.navigate(["/perdizConReclamo"]);
     }
   }
 
