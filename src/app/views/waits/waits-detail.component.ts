@@ -40,7 +40,7 @@ export class WaitDetail implements OnInit {
   private loadWaitingDetail(wait: any){
     this.wait = wait;
     this.waitNotExits = false;
-    document.title = wait.titlePost + ". Esperas del jabalí";
+    document.title = wait.titlePost + ". Esperas del jabalí. Blog de Joselito - El Reclamo de la perdiz";
   }
 
   private redirectIfWaitNotExits(){

@@ -40,7 +40,7 @@ export class CookDetail implements OnInit {
   private loadCookingDetail(cook: any){
     this.cook = cook;
     this.cookNotExits = false;
-    document.title = cook.titlePost + ". Cocina con nosotros";
+    document.title = cook.titlePost + ". Cocina con nosotros. Blog de Joselito - El Reclamo de la perdiz";
   }
 
   private redirectIfCookNotExits(){

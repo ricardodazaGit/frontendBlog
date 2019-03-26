@@ -40,7 +40,7 @@ export class PublicDetail implements OnInit {
   private loadPublicationDetail(publication: any){
     this.publication = publication;
     this.publicationNotExits = false;
-    document.title = publication.titlePost + ". Perdíz con reclamo";
+    document.title = publication.titlePost + ". Perdíz con reclamo. Blog de Joselito - El Reclamo de la perdiz";
   }
 
   private redirectIfPublicationNotExits(){
