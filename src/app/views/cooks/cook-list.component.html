@@ -10,7 +10,7 @@
         </div>
         <div class="col-lg-8">  
           <h5 class="card-title brown-title">{{ cook.titlePost }}</h5>
-          <p class="card-text" [innerHTML]="cook.descriptionPost | limiteCaracteres"></p>
+          <p class="card-text" [innerHTML]="cook.titleDescription | limiteCaracteres"></p>
           <p class="card-text"><small class="text-muted">Fecha publicación {{ cook.fechaPublicacion }}</small></p>
         </div>
       </div>
